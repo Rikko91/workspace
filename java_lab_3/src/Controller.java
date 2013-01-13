@@ -38,19 +38,19 @@ public class Controller implements Runnable {
 		director.getDirectorLock().lock();
 		try {
 			
-			if (director.getState() == MuseumState.Open) {//если музей открыт
-				flag_of_entrance=true; //контроллер разрешает пускать людей и выпускать людей 
+			if (director.getState() == MuseumState.Open) {//пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+				flag_of_entrance=true; //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ 
 				museum.setOpengate(true);
 				
 				if ( st != director.getState() ) 
-				System.out.println("Контроллер открыл турникет");
+				System.out.println("РљРѕРЅС‚СЂРѕР»Р»РµСЂ РѕС‚РєСЂС‹Р» С‚СѓСЂРЅРёРєРµС‚");
 				st = director.getState();
 			}
 			else
-				{// в другом случае разрешает только уходить людям
+				{// пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
 				flag_of_entrance=false;
 				if ( st != director.getState() ) 
-				System.out.println("Контроллер закрыл турникет");
+				System.out.println("РљРѕРЅС‚СЂРѕР»Р»РµСЂ Р·Р°РєСЂС‹Р» С‚СѓСЂРЅРёРєРµС‚");
 				st = director.getState();
 				}
 			director.getDirectorFunds().signalAll();
