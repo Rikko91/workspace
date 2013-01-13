@@ -42,11 +42,11 @@ public class PassEast implements Runnable {
 		this.opengate = opengate;
 	}
 
-	public boolean permitPeople() throws InterruptedException { // слушаем контроллера если пришли люди
+	public boolean permitPeople() throws InterruptedException { // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
 		director.getDirectorLock().lock();
 		try 
 		{
-			if (controller.isFlag_of_entrance() == true ) //если контроллер разрешает нам войти 
+			if (controller.isFlag_of_entrance() == true ) //пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ 
 			{
 				entrance = true;
 				return true;
@@ -64,7 +64,7 @@ public class PassEast implements Runnable {
 	public void takeVisitors () throws InterruptedException {	
 		director.getDirectorLock().lock();
 		try {
-			if (permitPeople() == true  ) // если вход разрешен
+			if (permitPeople() == true  ) // пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 			{
 				int count = visitors.getCountVisitorsToMuseum();
 				
@@ -74,8 +74,8 @@ public class PassEast implements Runnable {
 				//	people_in_museum++;
 				//	visitors.countVisitorsToMuseum--;
 				//}
-				System.out.println("Через EAST зашло - " + count + " людей");
-				System.out.println("Всего в музее людей - " + people_in_museum );
+				System.out.println("Р§РµСЂРµР· EAST Р·Р°С€Р»Рѕ - " + count + "Р»СЋРґРµР№");
+				System.out.println("Р’СЃРµРіРѕ РІ РјСѓР·РµРµ Р»СЋРґРµР№ - " + people_in_museum );
 			}
 		}
 		finally {
@@ -89,9 +89,9 @@ public class PassEast implements Runnable {
 		try {
 			
 		if (controller.isFlag_of_entrance() == true )
-			System.out.println("Турникет EAST открыт(Контроллер)");
+			System.out.println("РўСѓСЂРЅРёРєРµС‚ EAST РѕС‚РєСЂС‹С‚(РљРѕРЅС‚СЂРѕР»Р»РµСЂ)");
 		else 
-			System.out.println("Турникет EAST закрыт(Контроллер)");
+			System.out.println("РўСѓСЂРЅРёРєРµС‚ EAST Р·Р°РєСЂС‹С‚(РљРѕРЅС‚СЂРѕР»Р»РµСЂ)");
 		}
 		finally {
 			director.getDirectorLock().unlock();
