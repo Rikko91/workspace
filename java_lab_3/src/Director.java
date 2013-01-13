@@ -54,13 +54,13 @@ public class Director implements Runnable{
 			if (number == 2 ) 
 			{   
 				State = MuseumState.Open;
-				System.out.println("Музей открыт");
+				System.out.println("РњСѓР·РµР№ РѕС‚РєСЂС‹С‚");
 				controller.setEvent(true);
 			}
 			else
 			{
 				State = MuseumState.Close;
-				System.out.println("Музей закрыт");
+				System.out.println("РњСѓР·РµР№ Р·Р°РєСЂС‹С‚");
 				controller.setEvent(true);
 			}
 		
