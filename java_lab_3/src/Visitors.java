@@ -38,7 +38,7 @@ public class Visitors implements Runnable {
 		try 
 		{
 			countVisitorsToMuseum = new Random().nextInt(30) + 1;
-			System.out.println("Пришли посетители - " + countVisitorsToMuseum + " людей.");
+			System.out.println("РџСЂРёС€Р»Рё РїРѕСЃРµС‚РёС‚РµР»Рё - " + countVisitorsToMuseum + " Р»СЋРґРµР№.");
 			museum.setFlagOfTakeVisitors(true);
 			director.getDirectorFunds().signalAll();
 		}
